@@ -4,7 +4,7 @@
 4. Add proper loggin system
 5. Add docker configuration
 6. Add firebase ✅
-7. Add LSIM
+7. Add LSIM ✅
 8. Add pre-commit ✅
 9. Check if user want to add aws, or not ✅
 10. Add Makefile ✅

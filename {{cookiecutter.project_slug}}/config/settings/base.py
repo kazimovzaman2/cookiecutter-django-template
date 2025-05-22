@@ -303,3 +303,11 @@ broker_connection_retry_on_startup = False
 # DJANGO HEALTH CHECK
 BROKER_URL = env("DJANGO_BROKER_URL")
 REDIS_URL = env("DJANGO_REDIS_URL")
+
+
+{% if cookiecutter.use_lsim == "yes" -%}
+# Sms sender service
+SMS_SENDER: dict[str, Any] = {
+    "BACKEND": "apps.sms.backends.DummySmsSender",
+}
+{%- endif %}

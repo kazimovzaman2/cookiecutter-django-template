@@ -20,5 +20,9 @@ if [ "{{cookiecutter.initialize_git}}" == "yes" ]; then
     git init > /dev/null 2>&1
 fi
 
+if [ "{{cookiecutter.use_lsim}}" == "no" ]; then
+    rm -rf apps/sms/
+fi
+
 source .venv/bin/activate
 make format

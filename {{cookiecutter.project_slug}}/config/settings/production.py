@@ -168,3 +168,15 @@ firebase_certificate = credentials.Certificate(
 )
 firebase_admin.initialize_app(firebase_certificate)
 {%- endif %}
+
+
+{% if cookiecutter.use_lsim == "yes" -%}
+SMS_SENDER = {
+    "BACKEND": "apps.sms.backends.SmsSender",
+    "OPTIONS": {
+        "login": env("LSIM_LOGIN"),
+        "password": env("LSIM_PASSWORD"),
+        "sender": env("LSIM_SENDER"),
+    },
+}
+{%- endif %}

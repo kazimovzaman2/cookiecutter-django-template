@@ -14,6 +14,10 @@
         "yes",
         "no"
     ],
+    "use_lsim": [
+        "yes",
+        "no"
+    ],
     "use_firebase": [
         "yes",
         "no"
