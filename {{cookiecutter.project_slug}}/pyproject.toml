@@ -23,7 +23,10 @@ dependencies = [
     "sqlalchemy>=2.0.40",
     "django-filter==25.1",
     "django-import-export==4.3.7",
+    {%- if cookiecutter.use_aws == "yes" %}
+    "django-storages==1.14.6",
     "boto3==1.38.21",
+    {%- endif %}
     {{ '"firebase-admin==6.8.0",' if cookiecutter.use_firebase == "yes" else "" }}
 ]
 

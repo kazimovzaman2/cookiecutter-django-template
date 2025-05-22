@@ -20,6 +20,7 @@ CACHES = {
     }
 }
 
+{% if cookiecutter.use_aws == "yes" -%}
 INSTALLED_APPS += ["storages"]  # noqa: F405
 
 
@@ -79,6 +80,7 @@ PRIVATE_MEDIA_LOCATION = "private"
 PRIVATE_FILE_STORAGE = (
     "hello_django.storage_backends.PrivateMediaRootS3Boto3Storage"  # noqa: E501
 )
+{%- endif %}
 
 
 # EMAIL

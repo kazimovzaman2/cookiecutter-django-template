@@ -10,6 +10,10 @@
         "yes",
         "no"
     ],
+    "use_aws": [
+        "yes",
+        "no"
+    ],
     "use_firebase": [
         "yes",
         "no"
