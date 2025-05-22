@@ -16,7 +16,7 @@ from rest_framework_simplejwt.views import (
 
 urlpatterns = [
     path(
-        "api/",
+        "api/v<int:v>/",
         include(
             [
                 # Simple jwt
@@ -52,18 +52,18 @@ if not settings.DISABLE_API_DOC:
     urlpatterns += [
         # DRF Spectacular (API schema)
         path(
-            "api/schema/",
+            "api/v<int:v>/schema/",
             SpectacularAPIView.as_view(),
             name="schema",
         ),
         # DRF Spectacular UIs:
         path(
-            "api/schema/swagger-ui/",
+            "api/v<int:v>/schema/swagger-ui/",
             SpectacularSwaggerView.as_view(url_name="schema"),
             name="swagger-ui",
         ),
         path(
-            "api/schema/redoc/",
+            "api/v<int:v>/schema/redoc/",
             SpectacularRedocView.as_view(url_name="schema"),
             name="redoc",
         ),
