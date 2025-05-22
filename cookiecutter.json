@@ -10,6 +10,10 @@
         "yes",
         "no"
     ],
+    "username_type": [
+        "username",
+        "email"
+    ],
     "use_aws": [
         "yes",
         "no"
