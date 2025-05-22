@@ -140,6 +140,10 @@ SECURE_CONTENT_TYPE_NOSNIFF = env.bool(
 ADMIN_URL = env("DJANGO_ADMIN_URL")
 
 
+# Logging
+LOGGING["handlers"]["console"]["formatter"] = "json"  # noqa: F405
+
+
 # REST Framework
 # ------------------------------------------------------------------------------
 # https://www.django-rest-framework.org/api-guide/settings/

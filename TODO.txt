@@ -1,12 +1,12 @@
 1. Add AUTH_USER_MODEL
-2. Add proper versioning
-3. Write DEFAULT_PAGINATION_CLASS ✅
-4. Add proper loggin system
-5. Add docker configuration
-6. Add firebase ✅
-7. Add LSIM ✅
-8. Add pre-commit ✅
-9. Check if user want to add aws, or not ✅
-10. Add Makefile ✅
-11. Ask user model type (email, username)
+2. Ask user model type (email, username)
+3. Add proper versioning
+4. Write DEFAULT_PAGINATION_CLASS ✅
+5. Add proper loggin system ✅
+6. Add docker configuration
+7. Add firebase ✅
+8. Add LSIM ✅
+9. Add pre-commit ✅
+10. Check if user want to add aws, or not ✅
+11. Add Makefile ✅
 12. Format everythign after completion ✅
