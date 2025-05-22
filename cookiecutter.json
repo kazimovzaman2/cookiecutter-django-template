@@ -1,6 +1,7 @@
 {
     "project_name": "My Project",
     "project_slug": "my_project",
+    "domain_name": "example.com",
     "version": "0.1.0",
     "project_description": "A brief description of the project.",
     "author_name": "Your Name",

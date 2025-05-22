@@ -23,6 +23,7 @@ dependencies = [
     "sqlalchemy>=2.0.40",
     "django-filter==25.1",
     "django-import-export==4.3.7",
+    "boto3==1.38.21",
 ]
 
 [dependency-groups]
