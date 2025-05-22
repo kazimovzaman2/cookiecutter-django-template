@@ -17,7 +17,7 @@ env.read_env(os.path.join(BASE_DIR, ".env"))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 DEBUG = env.bool("DJANGO_DEBUG", False)
-DOMAIN = env("DJANGO_DOMAIN", "{{ cookiecutter.domain_name }}")
+DOMAIN = env("DJANGO_DOMAIN", default="{{ cookiecutter.domain_name }}")
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
 SECRET_KEY = env("DJANGO_SECRET_KEY")

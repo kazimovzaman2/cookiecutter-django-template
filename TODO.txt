@@ -1,9 +1,9 @@
 1. Add AUTH_USER_MODEL
 2. Ask user model type (email, username)
 3. Add proper versioning
-4. Write DEFAULT_PAGINATION_CLASS ✅
-5. Add proper loggin system ✅
-6. Add docker configuration
+4. Add docker configuration
+5. Write DEFAULT_PAGINATION_CLASS ✅
+6. Add proper loggin system ✅
 7. Add firebase ✅
 8. Add LSIM ✅
 9. Add pre-commit ✅
