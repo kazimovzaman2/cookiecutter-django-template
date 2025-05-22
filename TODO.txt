@@ -5,8 +5,8 @@
 5. Add docker configuration
 6. Add firebase ✅
 7. Add LSIM
-8. Add pre-commit
+8. Add pre-commit ✅
 9. Check if user want to add aws, or not ✅
 10. Add Makefile ✅
 11. Ask user model type (email, username)
-12. Format everythign after completion
+12. Format everythign after completion ✅

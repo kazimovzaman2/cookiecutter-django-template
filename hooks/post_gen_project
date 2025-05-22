@@ -19,3 +19,6 @@ uv sync
 if [ "{{cookiecutter.initialize_git}}" == "yes" ]; then
     git init > /dev/null 2>&1
 fi
+
+source .venv/bin/activate
+make format

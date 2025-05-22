@@ -1,0 +1,20 @@
+default_language_version:
+  python: python3.12
+
+repos:
+  - repo: local
+    hooks:
+      - id: format
+        name: format
+        entry: make format
+        language: system
+        pass_filenames: false
+      - id: typecheck
+        name: typecheck
+        entry: make type
+        language: system
+      - id: test
+        name: test
+        entry: make test
+        language: system
+        pass_filenames: false
