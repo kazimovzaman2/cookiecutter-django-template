@@ -1,0 +1,35 @@
+[project]
+name = "{{ cookiecutter.project_slug }}"
+version = "0.1.0"
+description = "{{ cookiecutter.project_description }}"
+authors = ["{{ cookiecutter.author_name }} <{{ cookiecutter.email }}>"]
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = [
+    "celery>=5.5.2",
+    "django==5.2.1",
+    "django-cors-headers>=4.7.0",
+    "django-environ>=0.12.0",
+    "django-health-check>=3.18.3",
+    "djangorestframework>=3.16.0",
+    "djangorestframework-simplejwt>=5.5.0",
+    "drf-spectacular>=0.28.0",
+    "drf-standardized-errors>=0.14.1",
+    "flower>=2.0.1",
+    "psutil>=7.0.0",
+    "psycopg2>=2.9.10",
+    "redis>=6.1.0",
+    "sqlalchemy>=2.0.40",
+    "django-filter==25.1",
+    "django-import-export==4.3.7",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.15.0",
+    "ruff>=0.11.9",
+]
+
+[tool.ruff]
+target-version = "py312"
