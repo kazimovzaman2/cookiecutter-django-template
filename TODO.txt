@@ -3,9 +3,10 @@
 3. Write DEFAULT_PAGINATION_CLASS ✅
 4. Add proper loggin system
 5. Add docker configuration
-6. Add firebase
+6. Add firebase ✅
 7. Add LSIM
 8. Add pre-commit
 9. Check if user want to add aws, or not (if not use whitenose)
 10. Add Makefile
 11. Ask user model type (email, username)
+12. Format everythign after completion

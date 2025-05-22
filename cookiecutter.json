@@ -9,5 +9,9 @@
     "initialize_git": [
         "yes",
         "no"
+    ],
+    "use_firebase": [
+        "yes",
+        "no"
     ]
 }

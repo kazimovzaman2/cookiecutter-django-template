@@ -1,3 +1,8 @@
+{% if cookiecutter.use_firebase == "yes" -%}
+import firebase_admin
+from firebase_admin import credentials
+{%- endif %}
+
 from config.settings.base import *  # noqa: F403
 from config.settings.base import env
 
@@ -75,6 +80,7 @@ PRIVATE_FILE_STORAGE = (
     "hello_django.storage_backends.PrivateMediaRootS3Boto3Storage"  # noqa: E501
 )
 
+
 # EMAIL
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#default-from-email
@@ -125,10 +131,12 @@ SECURE_CONTENT_TYPE_NOSNIFF = env.bool(
     "DJANGO_SECURE_CONTENT_TYPE_NOSNIFF", default=True
 )
 
+
 # ADMIN
 # ------------------------------------------------------------------------------
 # Django Admin URL regex.
 ADMIN_URL = env("DJANGO_ADMIN_URL")
+
 
 # REST Framework
 # ------------------------------------------------------------------------------
@@ -136,3 +144,25 @@ ADMIN_URL = env("DJANGO_ADMIN_URL")
 REST_FRAMEWORK["DEFAULT_RENDERER_CLASSES"] = (  # noqa: F405
     "rest_framework.renderers.JSONRenderer",
 )
+
+
+{% if cookiecutter.use_firebase == "yes" -%}
+# FIREBASE
+# ------------------------------------------------------------------------------
+firebase_certificate = credentials.Certificate(
+    {
+        "type": "service_account",
+        "project_id": env("FIREBASE_PROJECT_ID"),
+        "private_key_id": env("FIREBASE_PRIVATE_KEY_ID"),
+        "private_key": env("FIREBASE_PRIVATE_KEY").replace(r"\n", "\n"),
+        "client_email": env("FIREBASE_CLIENT_EMAIL"),
+        "client_id": env("FIREBASE_CLIENT_ID"),
+        "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+        "token_uri": "https://oauth2.googleapis.com/token",
+        "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+        "client_x509_cert_url": env("FIREBASE_CLIENT_X509_CERT_URL"),
+        "universe_domain": "googleapis.com",
+    }
+)
+firebase_admin.initialize_app(firebase_certificate)
+{%- endif %}
